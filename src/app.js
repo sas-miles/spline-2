@@ -7,16 +7,13 @@ let obj = null;
 let isToggled = false;
 
 function setInitialState() {
-  console.log('Setting initial state. Current URL:', window.location.pathname);
   if (window.location.pathname === '/spline-03-02') {
     if (!isToggled) {
-      console.log('Toggling state on');
       isToggled = true;
       spline.emitEvent('mouseDown', obj.name);
     }
   } else {
     if (isToggled) {
-      console.log('Toggling state off');
       isToggled = false;
       spline.emitEventReverse('mouseDown', obj.name);
     }
@@ -110,5 +107,4 @@ barba.init({
     },
   ],
 });
-console.log('Starting Spline initialization...');
 initSpline();
