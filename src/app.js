@@ -100,7 +100,7 @@ barba.init({
         return gsap.to(nextContainer, {
           opacity: 1,
           duration: 0.5,
-          delay: 0.5,
+          ease: 'power1.out',
           onComplete: () => {
             nextContainer.classList.remove('fixed');
             enableNavigation(); // Re-enable navigation after the transition
