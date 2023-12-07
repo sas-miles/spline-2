@@ -68,20 +68,14 @@ barba.init({
       beforeEnter() {
         disableNavigation(); // Disable navigation at the start of the transition
       },
-      leave(data) {
-        // Fade out the current container
-        return gsap.to(data.current.container, {
-          opacity: 0,
-          duration: 0.5,
-        });
-      },
       enter(data) {
         const nextContainer = data.next.container;
         nextContainer.classList.add('fixed');
 
-        // Initially set next container to invisible
-        gsap.set(nextContainer, { opacity: 0 });
-
+        gsap.to(data.current.container, {
+          opacity: 0,
+          duration: 2,
+        });
         // Delay the start of the fade-in for the next container
         return gsap.to(nextContainer, {
           opacity: 1,
