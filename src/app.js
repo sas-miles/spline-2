@@ -93,6 +93,9 @@ barba.init({
         const nextContainer = data.next.container;
         nextContainer.classList.add('fixed');
 
+        // Initially set next container to invisible to prevent user from seeing a clickable element
+        gsap.set(nextContainer, { opacity: 0 });
+
         // Delay the start of the fade-in for the next container
         return gsap.to(nextContainer, {
           opacity: 1,
@@ -107,4 +110,5 @@ barba.init({
     },
   ],
 });
+
 initSpline();
