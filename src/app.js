@@ -11,23 +11,19 @@ spline
   .then(() => {
     console.log('Spline scene loaded');
 
-    // Get list of Spline events used in the scene
-    const splineEvents = spline.getSplineEvents();
-    console.log('Spline Events:', splineEvents);
-
     const objOne = spline.findObjectById('1abf83a1-5d8c-4819-a952-7bcd8afbcb11');
     console.log('Object one found:', objOne);
 
-    // Add click event listener for objOne
-    document.querySelectorAll('.trigger_objone').forEach((element) => {
-      console.log('Listener added to:', element);
-      element.addEventListener('click', () => {
+    // Event delegation: Set up click event listener on the document body
+    document.body.addEventListener('click', (event) => {
+      // Check if the clicked element has the class 'trigger_objone'
+      if (event.target.classList.contains('trigger_objone')) {
         console.log('Clicked:', objOne);
         if (objOne) {
           spline.emitEvent('mouseDown', objOne.id);
           console.log('Event emitted for objOne');
         }
-      });
+      }
     });
   })
   .catch((error) => {
