@@ -12,8 +12,8 @@ dependencies:
     specifier: ^0.40.0
     version: 0.40.0
   '@splinetool/runtime':
-    specifier: ^0.9.518
-    version: 0.9.518
+    specifier: ^0.9.521
+    version: 0.9.521
   gsap:
     specifier: ^3.12.3
     version: 3.12.3
@@ -642,8 +642,8 @@ packages:
       playwright: 1.39.0
     dev: true
 
-  /@splinetool/runtime@0.9.518:
-    resolution: {integrity: sha512-g4SNWhvtSEayjBZPD10sWimjlOL9khPBGUyIWc/Cq2fKGJKUXsJ7ZiJ4hHnkEpoisSaRsnvTnxihQejgoQGs1g==}
+  /@splinetool/runtime@0.9.521:
+    resolution: {integrity: sha512-MJvC5ZDD6RYtOFEGiKkFw8q2X5CLc+T81lHymM/wCxAVeJ8MatYpCUtWQuOF/Loai2duYPadOGzZSqth/P9Mdw==}
     dependencies:
       on-change: 4.0.2
       semver-compare: 1.0.0
